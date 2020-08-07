@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           leading:IconButton(
             icon: Icon(Icons.account_circle,  color: Colors.white,size: 30.0,),
           ),
-          title: Text('Privacy Checker' , style: TextStyle(fontSize: 22.0),),
+          title: Text('Privacy Checker' , style: TextStyle(fontSize: 22.0 , fontFamily: 'Lobster'),),
           centerTitle: true,
         ),
         body: HomePage(),
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
   showAlertDialog(BuildContext context) {
     // Create button
     Widget okButton = FlatButton(
-      child: Text("OK" , style: TextStyle(color: Colors.white), ),
+      child: Text("OK" , style: TextStyle(color: Colors.white , fontFamily: 'Lobster' , fontSize: 20.0), ),
       onPressed: () {
         Navigator.of(context).pop();
       },
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
               margin: EdgeInsets.only(top: 20.0),
               child: Text(
                 'You Were Born on',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0 , color: Colors.white),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0 , color: Colors.white , fontFamily: 'Lobster'),
               ),
             ),
             Container(
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
               child: Card(
                 child: Padding(
                   padding: EdgeInsets.all(20.0),
-                  child: Text('$resultDate of $resultMonth in $resultYear' , style: TextStyle(fontSize: 22.0 , color: Colors.black),textAlign: TextAlign.center,)),
+                  child: Text('$resultDate of $resultMonth in $resultYear' , style: TextStyle(fontSize: 22.0 , color: Colors.black , fontFamily: 'Lobster'),textAlign: TextAlign.center,)),
               ),
             )
           ],
@@ -331,7 +331,9 @@ class _HomePageState extends State<HomePage> {
             child: TextFormField(
               controller: _idcontroller,
               decoration: InputDecoration(
+              
                 hintText: 'Enter your id number here',
+                
                 hintStyle: TextStyle(fontSize: 20.0),
                 prefixIcon: Icon(Icons.input),
                 border: OutlineInputBorder(borderSide:BorderSide(width: 10.0 ,color: Colors.teal)  ),
@@ -360,7 +362,8 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                         fontSize: 20.0,
                         color: Colors.white,
-                        fontWeight: FontWeight.normal),
+                        fontWeight: FontWeight.normal,
+                        fontFamily: 'Lobster'),
                   ),
                   color: Colors.teal,
                   padding: EdgeInsets.all(15.0),
