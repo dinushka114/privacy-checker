@@ -320,7 +320,7 @@ class _HomePageState extends State<HomePage> {
           alignment: Alignment.center,
           margin: EdgeInsets.only(top: 60.0),
           child: CircleAvatar(
-            radius: 100.0,
+            radius: 90.0,
             backgroundImage: AssetImage('images/logo.png'),
           ),
         ),
@@ -330,7 +330,13 @@ class _HomePageState extends State<HomePage> {
                 left: 20.0, right: 20.0, top: 30.0, bottom: 10.0),
             child: TextFormField(
               controller: _idcontroller,
-              decoration: InputDecoration(hintText: 'Enter Your id'),
+              decoration: InputDecoration(
+                hintText: 'Enter your id number here',
+                hintStyle: TextStyle(fontSize: 20.0),
+                prefixIcon: Icon(Icons.input),
+                border: OutlineInputBorder(borderSide:BorderSide(width: 10.0 ,color: Colors.teal)  ),
+                floatingLabelBehavior: FloatingLabelBehavior.always
+                ),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25.0),
             ),
